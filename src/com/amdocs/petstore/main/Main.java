@@ -1,4 +1,4 @@
-package main;
+package com.amdocs.petstore.main;
 
 import java.util.List;
 import java.util.Scanner;
