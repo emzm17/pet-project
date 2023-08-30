@@ -1,12 +1,14 @@
 package com.amdocs.petstore.dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.amdocs.petstore.exception.InvalidPriceException;
 import com.amdocs.petstore.model.Pet;
 
 public class PetDaoImp implements PetDAO {
@@ -112,9 +114,10 @@ public class PetDaoImp implements PetDAO {
 	}
 
 	@Override
-	public List searchByPrice(double price1, double price2) {
+	public List searchByPrice(double price1, double price2){
 		List<Pet> list=new ArrayList();
 		try {
+				
 			 PreparedStatement pst=c.prepareStatement("select * from table1 where price between ? and ?");
 			 pst.setDouble(1, price1);
 			 pst.setDouble(2, price2);
@@ -127,9 +130,10 @@ public class PetDaoImp implements PetDAO {
 				 
 				 list.add(pet);
 			 }
-		}catch(SQLException e) {
+		}
+		catch(SQLException e) {
 			 e.printStackTrace();
-		 }
+		}
 		return list;
 	}
 

@@ -1,5 +1,7 @@
 package com.amdocs.petstore.main;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +12,7 @@ public class Main {
 	public static void main(String [] args) {
 		Scanner sc = new Scanner(System.in); 
 			PetDaoImp petdaompl=new PetDaoImp();
+			
 			
             int choice;
             do {
@@ -74,7 +77,7 @@ public class Main {
             		for(int i=0;i<list.size();i++) {
             			 System.out.println(list.get(i));
             		}
-            		System.out.println(list.size());
+//            		System.out.println(list.size());
             		break;
             	case 5:
             		System.out.println("Enter pet category to count");

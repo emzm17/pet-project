@@ -2,6 +2,7 @@ package com.amdocs.petstore.dao;
 
 import java.util.List;
 
+import com.amdocs.petstore.exception.InvalidPriceException;
 import com.amdocs.petstore.model.Pet;
 
 public interface PetDAO {
