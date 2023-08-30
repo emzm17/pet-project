@@ -10,8 +10,10 @@ import java.util.List;
 import com.amdocs.petstore.model.Pet;
 
 public class PetDaoImp implements PetDAO {
-	DBConnection db=new DBConnection();
-	Connection c=db. getConnection();
+//	DBConnection db=new DBConnection();
+//	Connection c=db. getConnection();
+	 static Connection c
+     = DBConnection.getConnection();
 	
 
 	@Override
