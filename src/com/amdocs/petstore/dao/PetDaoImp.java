@@ -12,8 +12,7 @@ import com.amdocs.petstore.exception.InvalidPriceException;
 import com.amdocs.petstore.model.Pet;
 
 public class PetDaoImp implements PetDAO {
-//	DBConnection db=new DBConnection();
-//	Connection c=db. getConnection();
+
 	 static Connection c
      = DBConnection.getConnection();
 	

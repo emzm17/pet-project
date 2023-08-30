@@ -5,19 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
-//	 public Connection getConnection() {
-//		Connection c= null;
-//		 try {
-//			
-//			 Class.forName("oracle.jdbc.driver.OracleDriver"); //registration
-//			 c=DriverManager.getConnection("Jdbc:Oracle:thin:@localhost:1521:orcl","scott","tiger"); //connection
-//		 }catch(Exception e) {
-//			 System.out.println("Connection Error");
-//		 }
-//		
-//		return c;
-//		
-//	  }
+
 	 private static Connection con=null;
 	 static
 	    {
